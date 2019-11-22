@@ -1,0 +1,25 @@
+<div class="text-center">
+    <p>Update Prodect</p>
+    <ul style="list-style-type:none">
+        <li class="red" *ngFor='let error of errors'>
+            {{error}}
+        </li>
+    </ul>
+
+    <form (submit)="submitForm()">
+        <div>
+            <label>Name</label><br>
+            <input type="text" [(ngModel)]="thisauthor.name" name="name">
+        </div>
+        <div>
+            <label>Qty</label><br>
+            <input type="number" [(ngModel)]="thisauthor.qty" name="qty">
+        </div><br>
+        <div>
+            <label>Price</label><br>
+            <input type="number" [(ngModel)]="thisauthor.price" name="price">
+        </div><br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<!-- button这里不能加 tpye=“button”  -->

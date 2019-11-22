@@ -1,0 +1,25 @@
+<a routerLink="/new">New Author</a>
+<table>
+    <thead>
+        <tr>
+            <th>Id | </th>
+            <th>Name | </th>
+            <th>Qty | </th>
+            <th>Price | </th>
+            <th>Action | </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let author of authors'>
+            <td>{{author._id}}</td>
+            <td>{{author.name}}</td>
+            <td>{{author.qty}}</td>
+            <td>${{author.price}}</td>
+            <td>
+                <button type="button" (click)='showUpdate(author._id)'>Edit</button>
+                <button (click)="deleteOne(author._id)">Delete</button>
+                <button (click)="showOneDetial(author._id)">Detial</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+<div class="text-center">
+    <p>New Produce</p>
+
+
+    <a routerLink="/">Home</a><br>
+    <ul>
+        <li class="red" *ngFor='let error of errors'>{{error}}</li>
+    </ul>
+
+    <form (submit)="submitForm()">
+        <div>
+            <label>Name</label><br>
+            <input type="text" value="name" name="name" [(ngModel)]="author.name">
+        </div>
+        <div>
+            <label>Qty</label><br>
+            <input type="number" name="qty" [(ngModel)]="author.qty">
+        </div><br>
+        <div>
+            <label>Price</label><br>
+            <input type="number" name="price" [(ngModel)]="author.price">
+        </div><br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+
+</div>
+<!-- button这里不能加 tpye=“button”  -->
